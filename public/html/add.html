@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>Home page</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="/">List</a></li>
+                        <li class="active"><a href="/add">Add <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <h1 class="sub-header">Add new car</h1>
+                    <form class="form-horizontal" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="year" class="col-sm-2 control-label">Year</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" min="1900" max="2016" id="year" name="year" placeholder="Year">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="driven" class="col-sm-2 control-label">Kilometer driven</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" min="0" id="driven" name="driven" placeholder="Kilometer driven">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Add</button>
+                                <a href="/" class="btn btn-danger">Back</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
