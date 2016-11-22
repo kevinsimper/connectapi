@@ -42,6 +42,17 @@ app.post('/add', function(req, res, next) {
     });
 });
 
+app.get('/remove/:id', function(req, res, next) {
+    db.run("DELETE FROM `cars` WHERE id='" + req.params.id + "'",
+        function(err) {
+            if (err !== null) {
+                next(err);
+            } else {
+                res.redirect('/');
+            }
+        });
+});
+
 app.listen(9000, function() {
     console.log('App listening on port 9000!');
 });

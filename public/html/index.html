@@ -11,6 +11,7 @@
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
     <title>Home page</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
 
     <body>
@@ -19,7 +20,7 @@
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
                         <li class="active"><a href="/">List <span class="sr-only">(current)</span></a></li>
-                        <li><a href="/add">Add</a></li>
+                        <li><a href="/add">Create new car</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -93,6 +94,7 @@
                                 <th>Name</th>
                                 <th>Year</th>
                                 <th>Kilometer driven</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -111,6 +113,7 @@
                         <td>{car.name}</td>
                         <td>{car.year}</td>
                         <td>{car.driven}</td>
+                        <td> <a href={'/remove/' + car.id}><i className="fa fa-trash" aria-hidden="true"></i></a></td>
                     </tr>
                 );
             }
