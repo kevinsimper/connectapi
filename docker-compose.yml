@@ -2,8 +2,7 @@ version: '2'
 services:
   cars:
     build: .
-    volumes:
-      - .:/cars
+    command: nodemon 
     ports:
-      - '9000:9000'
-    command: nodemon
+      - "9000:9000"
+

@@ -3,7 +3,7 @@ var sqlite3 = require('sqlite3').verbose(),
 
 
 // Database initialization
-db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'",
+db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='cars'",
     function(err, rows) {
         if (err !== null) {
             console.log(err);

@@ -1,5 +1,5 @@
 # connectapi
 ## How to start?
 ```
-docker-compose up
+sudo docker-compose up
 ```
